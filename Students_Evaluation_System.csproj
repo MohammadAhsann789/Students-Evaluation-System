@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C5B65E7-994E-4A08-A2A2-CF0976BB60F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Students_Evaluation_System</RootNamespace>
+    <AssemblyName>Students_Evaluation_System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\..\..\Softwares\Bunifu Framework\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\..\..\Softwares\Bunifu Framework\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\..\..\..\Softwares\Bunifu Framework\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\..\..\..\Softwares\Bunifu Framework\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\..\..\Softwares\Bunifu Framework\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\..\..\..\Softwares\Bunifu Framework\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\Softwares\Bunifu Framework\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Assessments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Assessments.Designer.cs">
+      <DependentUpon>Assessments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Assessment_Components.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Assessment_Components.Designer.cs">
+      <DependentUpon>Assessment_Components.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Attendence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Attendence.Designer.cs">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CLOs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CLOs.Designer.cs">
+      <DependentUpon>CLOs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Component_Cards.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Component_Cards.Designer.cs">
+      <DependentUpon>Component_Cards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Rubrics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Rubrics.Designer.cs">
+      <DependentUpon>Rubrics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Rubric_Levels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Rubric_Levels.Designer.cs">
+      <DependentUpon>Rubric_Levels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Student_Assessment_Evaluation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Student_Assessment_Evaluation.Designer.cs">
+      <DependentUpon>Student_Assessment_Evaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Student_Component_Evaluation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Student_Component_Evaluation.Designer.cs">
+      <DependentUpon>Student_Component_Evaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseUtility\Assessment_Components_Utility.cs" />
+    <Compile Include="DatabaseUtility\CLOs_Utility.cs" />
+    <Compile Include="DatabaseUtility\Rubrics_Utility.cs" />
+    <Compile Include="DatabaseUtility\Rubric_Levels_Utility.cs" />
+    <Compile Include="DatabaseUtility\Assessment_Utility.cs" />
+    <Compile Include="DatabaseUtility\Student_Evaluation_Utility.cs" />
+    <Compile Include="Forms\Runner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Runner.designer.cs">
+      <DependentUpon>Runner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Assessment_Cards.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Assessment_Cards.Designer.cs">
+      <DependentUpon>Assessment_Cards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Functions.cs" />
+    <Compile Include="Utility\Theme_Color.cs" />
+    <EmbeddedResource Include="Controls\Assessments.resx">
+      <DependentUpon>Assessments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Assessment_Components.resx">
+      <DependentUpon>Assessment_Components.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Attendence.resx">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CLOs.resx">
+      <DependentUpon>CLOs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Component_Cards.resx">
+      <DependentUpon>Component_Cards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Rubrics.resx">
+      <DependentUpon>Rubrics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Rubric_Levels.resx">
+      <DependentUpon>Rubric_Levels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Student_Assessment_Evaluation.resx">
+      <DependentUpon>Student_Assessment_Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Student_Component_Evaluation.resx">
+      <DependentUpon>Student_Component_Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Runner.resx">
+      <DependentUpon>Runner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Assessment_Cards.resx">
+      <DependentUpon>Assessment_Cards.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\course_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assessments_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signal_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_card_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students_40px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_30px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_30px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assessments_40px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_40px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\course_40px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signal_40px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_40px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_card_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam_30px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_node_30px_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assessments_100px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
